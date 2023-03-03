@@ -1,0 +1,25 @@
+// Colors from the Tailwind CSS Color Palette
+// https://tailwindcss.com/docs/customizing-colors
+
+:root {
+  // colors
+  --indigo-500: #6366f1;
+  --indigo-800: #3730a3;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-600: #4b5563;
+  --emerald-600: #059669;
+  --emerald-900: #064e3b;
+  --red-600: #dc2626;
+
+  // spacing
+  --base-padding: 2px;
+  --base-margin: 2px;
+
+  // borders
+  --base-border-thickness: 1px;
+
+  // font
+  --font-weight-normal: normal;
+  --font-weight-bold: bold;
+}

@@ -1,0 +1,38 @@
+@import './variables';
+@import './resets';
+@import './base';
+
+// just for now
+.color-palette {
+  display: flex;
+
+  & > div {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+}
+.colors-1 {
+  background-color: var(--indigo-500);
+}
+.colors-2 {
+  background-color: var(--indigo-800);
+}
+.colors-3 {
+  background-color: var(--emerald-600);
+}
+.colors-4 {
+  background-color: var(--emerald-900);
+}
+.colors-5 {
+  background-color: var(--gray-200);
+}
+.colors-6 {
+  background-color: var(--gray-400);
+}
+.colors-7 {
+  background-color: var(--gray-600);
+}
+.colors-8 {
+  background-color: var(--red-600);
+}
