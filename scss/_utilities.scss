@@ -1,0 +1,306 @@
+@use 'sass:math';
+
+$utilities: (
+  'font size': (
+    'prefix': 'font',
+    'property': 'font-size',
+    'values': (
+      'xs': var(--base-font-size),
+      'sm': var(--font-size-sm),
+      'md': var(--font-size-md),
+      'lg': var(--font-size-lg),
+      'xl': var(--font-size-xl),
+      'xxl': var(--font-size-xxl)
+    )
+  ),
+  'padding': (
+    'prefix': 'p',
+    'property': 'padding',
+    'values': (
+      '0': 0,
+      '4': calc(var(--spacer) * 2),
+      '8': calc(var(--spacer) * 4),
+      '16': calc(var(--spacer) * 8),
+      '24': calc(var(--spacer) * 12),
+      '32': calc(var(--spacer) * 16),
+      '40': calc(var(--spacer) * 20),
+      '48': calc(var(--spacer) * 24)
+    )
+  ),
+  'padding horizontal only': (
+    'prefix': 'px',
+    'property': 'padding',
+    'values': (
+      '0': 0,
+      '4': 0 calc(var(--spacer) * 2),
+      '8': 0 calc(var(--spacer) * 4),
+      '16': 0 calc(var(--spacer) * 8),
+      '24': 0 calc(var(--spacer) * 12),
+      '32': 0 calc(var(--spacer) * 16),
+      '40': 0 calc(var(--spacer) * 20),
+      '48': 0 calc(var(--spacer) * 24)
+    )
+  ),
+  'padding vertical only': (
+    'prefix': 'py',
+    'property': 'padding',
+    'values': (
+      '0': 0,
+      '4': calc(var(--spacer) * 2) 0,
+      '8': calc(var(--spacer) * 4) 0,
+      '16': calc(var(--spacer) * 8) 0,
+      '24': calc(var(--spacer) * 12) 0,
+      '32': calc(var(--spacer) * 16) 0,
+      '40': calc(var(--spacer) * 20) 0,
+      '48': calc(var(--spacer) * 24) 0
+    )
+  ),
+  'padding left': (
+    'prefix': 'pl',
+    'property': 'padding-left',
+    'values': (
+      '0': 0,
+      '4': calc(var(--spacer) * 2),
+      '8': calc(var(--spacer) * 4),
+      '16': calc(var(--spacer) * 8),
+      '24': calc(var(--spacer) * 12),
+      '32': calc(var(--spacer) * 16),
+      '40': calc(var(--spacer) * 20),
+      '48': calc(var(--spacer) * 24)
+    )
+  ),
+  'padding right': (
+    'prefix': 'pr',
+    'property': 'padding-right',
+    'values': (
+      '0': 0,
+      '4': calc(var(--spacer) * 2),
+      '8': calc(var(--spacer) * 4),
+      '16': calc(var(--spacer) * 8),
+      '24': calc(var(--spacer) * 12),
+      '32': calc(var(--spacer) * 16),
+      '40': calc(var(--spacer) * 20),
+      '48': calc(var(--spacer) * 24)
+    )
+  ),
+  'padding top': (
+    'prefix': 'pt',
+    'property': 'padding-top',
+    'values': (
+      '0': 0,
+      '4': calc(var(--spacer) * 2),
+      '8': calc(var(--spacer) * 4),
+      '16': calc(var(--spacer) * 8),
+      '24': calc(var(--spacer) * 12),
+      '32': calc(var(--spacer) * 16),
+      '40': calc(var(--spacer) * 20),
+      '48': calc(var(--spacer) * 24)
+    )
+  ),
+  'padding bottom': (
+    'prefix': 'pb',
+    'property': 'padding-bottom',
+    'values': (
+      '0': 0,
+      '4': calc(var(--spacer) * 2),
+      '8': calc(var(--spacer) * 4),
+      '16': calc(var(--spacer) * 8),
+      '24': calc(var(--spacer) * 12),
+      '32': calc(var(--spacer) * 16),
+      '40': calc(var(--spacer) * 20),
+      '48': calc(var(--spacer) * 24)
+    )
+  ),
+  'margin': (
+    'prefix': 'm',
+    'property': 'margin',
+    'values': (
+      '0': 0,
+      '4': calc(var(--spacer) * 2),
+      '8': calc(var(--spacer) * 4),
+      '16': calc(var(--spacer) * 8),
+      '24': calc(var(--spacer) * 12),
+      '32': calc(var(--spacer) * 16),
+      '40': calc(var(--spacer) * 20),
+      '48': calc(var(--spacer) * 24)
+    )
+  ),
+  'margin left': (
+    'prefix': 'ml',
+    'property': 'margin-left',
+    'values': (
+      '0': 0,
+      '4': calc(var(--spacer) * 2),
+      '8': calc(var(--spacer) * 4),
+      '16': calc(var(--spacer) * 8),
+      '24': calc(var(--spacer) * 12),
+      '32': calc(var(--spacer) * 16),
+      '40': calc(var(--spacer) * 20),
+      '48': calc(var(--spacer) * 24)
+    )
+  ),
+  'margin right': (
+    'prefix': 'mr',
+    'property': 'margin-right',
+    'values': (
+      '0': 0,
+      '4': calc(var(--spacer) * 2),
+      '8': calc(var(--spacer) * 4),
+      '16': calc(var(--spacer) * 8),
+      '24': calc(var(--spacer) * 12),
+      '32': calc(var(--spacer) * 16),
+      '40': calc(var(--spacer) * 20),
+      '48': calc(var(--spacer) * 24)
+    )
+  ),
+  'margin top': (
+    'prefix': 'mt',
+    'property': 'margin-top',
+    'values': (
+      '0': 0,
+      '4': calc(var(--spacer) * 2),
+      '8': calc(var(--spacer) * 4),
+      '16': calc(var(--spacer) * 8),
+      '24': calc(var(--spacer) * 12),
+      '32': calc(var(--spacer) * 16),
+      '40': calc(var(--spacer) * 20),
+      '48': calc(var(--spacer) * 24)
+    )
+  ),
+  'margin bottom': (
+    'prefix': 'mb',
+    'property': 'margin-bottom',
+    'values': (
+      '0': 0,
+      '4': calc(var(--spacer) * 2),
+      '8': calc(var(--spacer) * 4),
+      '16': calc(var(--spacer) * 8),
+      '24': calc(var(--spacer) * 12),
+      '32': calc(var(--spacer) * 16),
+      '40': calc(var(--spacer) * 20),
+      '48': calc(var(--spacer) * 24)
+    )
+  ),
+  'margin auto': (
+    'prefix': 'm',
+    'property': 'margin',
+    'values': (
+      'auto': 0 auto
+    )
+  ),
+  'display': (
+    'prefix': 'd',
+    'property': 'display',
+    'values': (
+      'none': none,
+      'block': block,
+      'flex': flex,
+      'inline-flex': inline-flex,
+      'inline': inline,
+      'inline-block': inline-block,
+      'grid': grid,
+      'table': table
+    )
+  ),
+  'flex direction': (
+    'prefix': 'flex',
+    'property': 'flex-direction',
+    'values': (
+      'row': row,
+      'column': column,
+      'row-reverse': row-reverse,
+      'column-reverse': column-reverse
+    )
+  ),
+  'justify content': (
+    'prefix': 'justify-content',
+    'property': 'justify-content',
+    'values': (
+      'start': start,
+      'end': end,
+      'center': center,
+      'between': space-between,
+      'around': space-around,
+      'evenly': space-evenly
+    )
+  ),
+  'align items': (
+    'prefix': 'align-items',
+    'property': 'align-items',
+    'values': (
+      'start': start,
+      'end': end,
+      'center': center,
+      'baseline': baseline,
+      'stretch': stretch
+    )
+  ),
+  'align self': (
+    'prefix': 'align-self',
+    'property': 'align-self',
+    'values': (
+      'start': start,
+      'end': end,
+      'center': center,
+      'baseline': baseline,
+      'stretch': stretch
+    )
+  ),
+  'flex wrap': (
+    'prefix': 'flex-wrap',
+    'property': 'flex-wrap',
+    'values': (
+      'nowrap': nowrap,
+      'wrap': wrap,
+      'wrap-reverse': wrap-reverse
+    )
+  ),
+  'order': (
+    'prefix': 'order',
+    'property': 'order',
+    'values': (
+      '1': 1,
+      '2': 2,
+      '3': 3,
+      '4': 4,
+      '5': 5,
+      '6': 6,
+      '7': 7,
+      '8': 8,
+      '9': 9,
+      '10': 10,
+      '11': 11,
+      '12': 12
+    )
+  ),
+  'align content': (
+    'prefix': 'align-content',
+    'property': 'align-content',
+    'values': (
+      'start': start,
+      'end': end,
+      'center': center,
+      'baseline': baseline,
+      'stretch': stretch
+    )
+  )
+);
+
+// generate utility classes
+@each $property, $map in $utilities {
+  $prefix: map-get($map, 'prefix');
+  $values: map-get($map, 'values');
+  $rule: map-get($map, 'property');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .#{$prefix} {
+        #{$rule}: $v;
+      }
+    } @else {
+      .#{$prefix}-#{$k} {
+        #{$rule}: $v;
+      }
+    }
+  }
+}

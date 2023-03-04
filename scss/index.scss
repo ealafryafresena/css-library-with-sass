@@ -1,38 +1,54 @@
-@import './variables';
 @import './resets';
+@import './variables';
 @import './base';
+@import './utilities';
 
 // just for now
-.color-palette {
-  display: flex;
-
-  & > div {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-  }
-}
 .colors-1 {
   background-color: var(--indigo-500);
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
 }
 .colors-2 {
   background-color: var(--indigo-800);
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
 }
 .colors-3 {
   background-color: var(--emerald-600);
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
 }
 .colors-4 {
   background-color: var(--emerald-900);
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
 }
 .colors-5 {
   background-color: var(--gray-200);
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
 }
 .colors-6 {
   background-color: var(--gray-400);
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
 }
 .colors-7 {
   background-color: var(--gray-600);
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
 }
 .colors-8 {
   background-color: var(--red-600);
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
 }
