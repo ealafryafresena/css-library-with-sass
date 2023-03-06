@@ -1,0 +1,94 @@
+$grid-columns: 12;
+$container-max-widths: (
+  'sm': 540px,
+  'md': 720px,
+  'lg': 960px,
+  'xl': 1140px
+);
+$grid-gaps: (
+  '20': 10px,
+  '30': 15px,
+  '40': 20px,
+  '50': 25px
+);
+
+// base layout classes
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @each $key, $val in $container-max-widths {
+    &.container-#{$key} {
+      max-width: #{$val};
+    }
+  }
+}
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+// grid gaps
+@each $key, $val in $grid-gaps {
+  .gap-#{$key} > * {
+    padding: $val;
+  }
+  .gap-#{$key} {
+    margin-left: -$val;
+    margin-right: -$val;
+  }
+}
+
+// cols classes
+@include xs {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-xs {
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: calc($i * 100% / $grid-columns);
+    }
+  }
+}
+
+@include sm {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-sm {
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: calc($i * 100% / $grid-columns);
+    }
+  }
+}
+
+@include md {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-md {
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: calc($i * 100% / $grid-columns);
+    }
+  }
+}
+
+@include lg {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-lg {
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: calc($i * 100% / $grid-columns);
+    }
+  }
+}
+
+@include xl {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-xl {
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: calc($i * 100% / $grid-columns);
+    }
+  }
+}
