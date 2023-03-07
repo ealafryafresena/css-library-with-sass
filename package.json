@@ -1,12 +1,12 @@
 {
   "name": "css-library-with-sass",
   "version": "1.0.0",
-  "description": "",
+  "description": "A CSS Library made with SASS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "ealafryafresena",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",

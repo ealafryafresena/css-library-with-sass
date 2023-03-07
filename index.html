@@ -10,143 +10,346 @@
   <body>
     <div class="container container-lg">
       <h1 class="pt-16 pb-24 font-xxl">CSS Library With SASS</h1>
-      <!-- colors-->
+      <!-- Colors-->
       <h2 class="mb-2 font-xl">Colors</h2>
       <div
         class="d-flex pt-8 pb-24  justify-content-between font-sm flex-wrap-wrap"
       >
-        <div class="colors-1"><div class="p-8">Indigo 500</div></div>
-        <div class="colors-2"><div class="p-8">Indigo 800</div></div>
-        <div class="colors-3"><div class="p-8">Emerald-600</div></div>
-        <div class="colors-4"><div class="p-8">Emerald-900</div></div>
-        <div class="colors-5"><div class="p-8">Gray-200</div></div>
-        <div class="colors-6"><div class="p-8">Gray-400</div></div>
-        <div class="colors-7"><div class="p-8">Gray-600</div></div>
-        <div class="colors-8"><div class="p-8">Gray-800</div></div>
-        <div class="colors-9"><div class="p-8">Red-600</div></div>
+        <div class="colors-1"><div class="p-8">Indigo 100</div></div>
+        <div class="colors-2"><div class="p-8">Indigo 200</div></div>
+        <div class="colors-3"><div class="p-8">Indigo 300</div></div>
+        <div class="colors-4"><div class="p-8">Indigo 500</div></div>
+        <div class="colors-5"><div class="p-8">Indigo 800</div></div>
+        <div class="colors-6"><div class="p-8">Gray-200</div></div>
+        <div class="colors-7"><div class="p-8">Gray-400</div></div>
+        <div class="colors-8"><div class="p-8">Gray-600</div></div>
+        <div class="colors-9"><div class="p-8">Gray-800</div></div>
       </div>
 
-      <!-- grid system -->
-      <h2 class="mb-2 font-xl">Grid System</h2>
-      <div class="row gap-30 justify-content-center">
-        <div class="col-12-xs col-6-sm col-3-md">
-          <div class="card p-8">
-            <h3 class="card-title font-lg">
-              1 Facilis possimus nobis
-            </h3>
-            <p class="card-body font-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              ducimus officia, vel facilis possimus nobis necessitatibus
-              laudantium voluptatum saepe aspernatur. Dolores, ratione odio illo
-              maiores accusantium distinctio magni eius consequatur!
-            </p>
+      <!-- Grid System -->
+      <h2 class="py-8 font-xl">Grid System</h2>
+      <!-- Equal-Width Columns -->
+      <h3 class="py-8 font-md">Equal-Width Columns</h3>
+      <div class="row gap-x-20 indigo-100 py-16">
+        <div class="col">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col
           </div>
         </div>
-        <div class="col-12-xs col-6-sm col-3-md">
-          <div class="card p-8">
-            <h3 class="card-title font-lg">
-              2 Amet consectetur adipisicing
-            </h3>
-            <p class="card-body font-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              ducimus officia, vel facilis possimus nobis necessitatibus
-              laudantium voluptatum saepe aspernatur. Dolores, ratione odio illo
-              maiores accusantium distinctio magni eius consequatur!
-            </p>
+        <div class="col">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col
           </div>
         </div>
-        <div class="col-12-xs col-6-sm col-3-md">
-          <div class="card p-8">
-            <h3 class="card-title font-lg">3 Illum ducimus officia</h3>
-            <p class="card-body font-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              ducimus officia, vel facilis possimus nobis necessitatibus
-              laudantium voluptatum saepe aspernatur. Dolores, ratione odio illo
-              maiores accusantium distinctio magni eius consequatur!
-            </p>
+        <div class="col">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col
           </div>
         </div>
-        <div class="col-12-xs col-6-sm col-3-md">
-          <div class="card p-8">
-            <h3 class="card-title font-lg">
-              4 Accusantium distinctio magni
-            </h3>
-            <p class="card-body font-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              ducimus officia, vel facilis possimus nobis necessitatibus
-              laudantium voluptatum saepe aspernatur. Dolores, ratione odio illo
-              maiores accusantium distinctio magni eius consequatur!
-            </p>
+        <div class="col">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col
           </div>
         </div>
       </div>
-      <div class="row gap-30 justify-content-center">
-        <div class="col-12-xs col-6-sm col-6-md">
-          <div class="card p-8">
-            <h3 class="card-title font-lg">5 Illum ducimus officia</h3>
-            <p class="card-body font-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              ducimus officia, vel facilis possimus nobis necessitatibus
-              laudantium voluptatum saepe aspernatur. Dolores, ratione odio illo
-              maiores accusantium distinctio magni eius consequatur!
-            </p>
+      <div class="py-16"></div>
+      <!-- Equal-Width Multi-Row Columns -->
+      <h3 class="py-8 font-md">Equal-Width Multi-Row Columns</h3>
+      <div class="row gap-20 indigo-100 py-16">
+        <div class="col">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col
           </div>
         </div>
-        <div class="col-12-xs col-6-sm col-6-md">
-          <div class="card p-8">
-            <h3 class="card-title font-lg">
-              6 Accusantium distinctio magni
-            </h3>
-            <p class="card-body font-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              ducimus officia, vel facilis possimus nobis necessitatibus
-              laudantium voluptatum saepe aspernatur. Dolores, ratione odio illo
-              maiores accusantium distinctio magni eius consequatur!
-            </p>
+        <div class="col">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col
           </div>
         </div>
       </div>
-      <div class="row gap-30 justify-content-center">
-        <div class="col-12-xs col-12-sm col-4-md">
-          <div class="card p-8">
-            <h3 class="card-title font-lg">
-              7 Amet consectetur adipisicing
-            </h3>
-            <p class="card-body font-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              ducimus officia, vel facilis possimus nobis necessitatibus
-              laudantium voluptatum saepe aspernatur. Dolores, ratione odio illo
-              maiores accusantium distinctio magni eius consequatur!
-            </p>
+      <div class="py-16"></div>
+      <!-- Responsive Columns -->
+      <h3 class="py-8 font-md">Responsive Columns</h3>
+      <div class="row gap-x-20 indigo-100 py-16">
+        <div class="col-12-xs col-6-sm col-3-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-3-md
+          </div>
+        </div>
+        <div class="col-12-xs col-6-sm col-3-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-3-md
+          </div>
+        </div>
+        <div class="col-12-xs col-6-sm col-3-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-3-md
+          </div>
+        </div>
+        <div class="col-12-xs col-6-sm col-3-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-3-md
+          </div>
+        </div>
+      </div>
+      <div class="py-16"></div>
+      <div class="row gap-x-20 indigo-100 py-16">
+        <div class="col-12-xs col-6-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-4-md
+          </div>
+        </div>
+        <div class="col-12-xs col-6-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-4-md
           </div>
         </div>
         <div class="col-12-xs col-12-sm col-4-md">
-          <div class="card p-8">
-            <h3 class="card-title font-lg">
-              8 Facilis possimus nobis
-            </h3>
-            <p class="card-body font-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              ducimus officia, vel facilis possimus nobis necessitatibus
-              laudantium voluptatum saepe aspernatur. Dolores, ratione odio illo
-              maiores accusantium distinctio magni eius consequatur!
-            </p>
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
+          </div>
+        </div>
+      </div>
+      <div class="py-16"></div>
+      <div class="row gap-x-20 indigo-100 py-16">
+        <div class="col-12-xs col-12-sm col-6-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-6-md
+          </div>
+        </div>
+        <div class="col-12-xs col-12-sm col-6-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-6-md
+          </div>
+        </div>
+      </div>
+      <div class="py-16"></div>
+      <div class="row gap-x-20 indigo-100 py-16">
+        <div class="col-12-xs col-6-sm col-6-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-6-md
+          </div>
+        </div>
+      </div>
+      <div class="py-16"></div>
+      <!-- Responsive Columns with Offset -->
+      <h3 class="py-8 font-md">Responsive Columns with Offset</h3>
+      <div class="row gap-x-20 indigo-100 py-16">
+        <div class="col-12-xs col-6-sm col-3-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-6-sm .col-3-md
+          </div>
+        </div>
+        <div class="col-12-xs col-6-sm col-3-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-6-sm .col-3-md
+          </div>
+        </div>
+        <div class="col-12-xs col-6-sm col-3-md offset-3-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-6-sm .col-3-md .offset-3-md
+          </div>
+        </div>
+      </div>
+      <div class="py-16"></div>
+      <div class="row gap-x-20 indigo-100 py-16">
+        <div class="col-12-xs col-6-sm offset-6-sm col-6-md offset-6-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .offset-6-sm .col-6-md .offset-6-md
+          </div>
+        </div>
+      </div>
+      <div class="py-16"></div>
+      <!-- Vertical Alignment Columns -->
+      <h3 class="py-8 font-md">Vertical Alignment Columns</h3>
+      <div class="row gap-x-20 indigo-100 py-16 h-150 align-content-start">
+        <div class="col-12-xs col-6-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-4-md
+          </div>
+        </div>
+        <div class="col-12-xs col-6-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-4-md
+          </div>
+        </div>
+        <div class="col-12-xs col-6-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-4-md
+          </div>
+        </div>
+      </div>
+      <div class="py-16"></div>
+      <div class="row gap-x-20 indigo-100 py-16 h-150 align-content-center">
+        <div class="col-12-xs col-6-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-4-md
+          </div>
+        </div>
+        <div class="col-12-xs col-6-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-4-md
+          </div>
+        </div>
+        <div class="col-12-xs col-6-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-4-md
+          </div>
+        </div>
+      </div>
+      <div class="py-16"></div>
+      <div class="row gap-x-20 indigo-100 py-16 h-150 align-content-end">
+        <div class="col-12-xs col-6-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-4-md
+          </div>
+        </div>
+        <div class="col-12-xs col-6-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-4-md
+          </div>
+        </div>
+        <div class="col-12-xs col-6-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-6-sm .col-4-md
+          </div>
+        </div>
+      </div>
+      <div class="py-16"></div>
+      <!-- Vertical Align-Self Columns -->
+      <h3 class="py-8 font-md">Vertical Align-Self Columns</h3>
+      <div class="row gap-x-20 indigo-100 py-16 h-200">
+        <div class="col-12-xs col-12-sm col-4-md align-self-start">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
+          </div>
+        </div>
+        <div class="col-12-xs col-12-sm col-4-md align-self-center">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
+          </div>
+        </div>
+        <div class="col-12-xs col-12-sm col-4-md align-self-end">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
+          </div>
+        </div>
+      </div>
+      <div class="py-16"></div>
+      <!-- Horizontal Alignment Columns -->
+      <h3 class="py-8 font-md">Horizontal Alignment Columns</h3>
+      <div class="row gap-x-20 indigo-100 py-16 justify-content-center">
+        <div class="col-12-xs col-12-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
           </div>
         </div>
         <div class="col-12-xs col-12-sm col-4-md">
-          <div class="card p-8">
-            <h3 class="card-title font-lg">
-              9 Facilis possimus nobis
-            </h3>
-            <p class="card-body font-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              ducimus officia, vel facilis possimus nobis necessitatibus
-              laudantium voluptatum saepe aspernatur. Dolores, ratione odio illo
-              maiores accusantium distinctio magni eius consequatur!
-            </p>
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
+          </div>
+        </div>
+      </div>
+      <div class="row gap-x-20 indigo-100 py-16 justify-content-start">
+        <div class="col-12-xs col-12-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
+          </div>
+        </div>
+        <div class="col-12-xs col-12-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
+          </div>
+        </div>
+      </div>
+      <div class="row gap-x-20 indigo-100 py-16 justify-content-end">
+        <div class="col-12-xs col-12-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
+          </div>
+        </div>
+        <div class="col-12-xs col-12-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
+          </div>
+        </div>
+      </div>
+
+      <div class="row gap-x-20 indigo-100 py-16 justify-content-between">
+        <div class="col-12-xs col-12-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
+          </div>
+        </div>
+        <div class="col-12-xs col-12-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
+          </div>
+        </div>
+      </div>
+      <div class="row gap-x-20 indigo-100 py-16 justify-content-around">
+        <div class="col-12-xs col-12-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
+          </div>
+        </div>
+        <div class="col-12-xs col-12-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
+          </div>
+        </div>
+      </div>
+      <div class="row gap-x-20 indigo-100 py-16 justify-content-evenly">
+        <div class="col-12-xs col-12-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
+          </div>
+        </div>
+        <div class="col-12-xs col-12-sm col-4-md">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col-12-xs .col-12-sm .col-4-md
+          </div>
+        </div>
+      </div>
+
+      <div class="py-16"></div>
+      <!-- No Gutters Rows and Columns -->
+      <h3 class="py-8 font-md">No Gutters Rows and Columns</h3>
+      <div class="row p-16 indigo-100">
+        <div class="col">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-item pl-8 py-16 font-sm">
+            .col
           </div>
         </div>
       </div>
     </div>
+    <div class="py-48"></div>
   </body>
 </html>

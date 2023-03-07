@@ -1,5 +1,59 @@
-@use 'sass:math';
+@function calculateSpacing($i) {
+  @return calc(var(--spacer) * $i);
+}
 
+$single-direction-spacing: (
+  '0': 0,
+  '4': calculateSpacing(2),
+  '8': calculateSpacing(4),
+  '12': calculateSpacing(6),
+  '16': calculateSpacing(8),
+  '24': calculateSpacing(12),
+  '32': calculateSpacing(16),
+  '40': calculateSpacing(20),
+  '48': calculateSpacing(24)
+);
+
+$horizontal-spacing: (
+  '0': 0,
+  '4': 0 calculateSpacing(2),
+  '8': 0 calculateSpacing(4),
+  '12': 0 calculateSpacing(6),
+  '16': 0 calculateSpacing(8),
+  '24': 0 calculateSpacing(12),
+  '32': 0 calculateSpacing(16),
+  '40': 0 calculateSpacing(20),
+  '48': 0 calculateSpacing(24)
+);
+
+$vertical-spacing: (
+  '0': 0,
+  '4': calculateSpacing(2) 0,
+  '8': calculateSpacing(4) 0,
+  '12': calculateSpacing(6) 0,
+  '16': calculateSpacing(8) 0,
+  '24': calculateSpacing(12) 0,
+  '32': calculateSpacing(16) 0,
+  '40': calculateSpacing(20) 0,
+  '48': calculateSpacing(24) 0
+);
+
+$order: (
+  '1': 1,
+  '2': 2,
+  '3': 3,
+  '4': 4,
+  '5': 5,
+  '6': 6,
+  '7': 7,
+  '8': 8,
+  '9': 9,
+  '10': 10,
+  '11': 11,
+  '12': 12
+);
+
+/* generate utility classes */
 $utilities: (
   'font size': (
     'prefix': 'font',
@@ -16,170 +70,72 @@ $utilities: (
   'padding': (
     'prefix': 'p',
     'property': 'padding',
-    'values': (
-      '0': 0,
-      '4': calc(var(--spacer) * 2),
-      '8': calc(var(--spacer) * 4),
-      '16': calc(var(--spacer) * 8),
-      '24': calc(var(--spacer) * 12),
-      '32': calc(var(--spacer) * 16),
-      '40': calc(var(--spacer) * 20),
-      '48': calc(var(--spacer) * 24)
-    )
+    'values': $single-direction-spacing
   ),
   'padding horizontal only': (
     'prefix': 'px',
     'property': 'padding',
-    'values': (
-      '0': 0,
-      '4': 0 calc(var(--spacer) * 2),
-      '8': 0 calc(var(--spacer) * 4),
-      '16': 0 calc(var(--spacer) * 8),
-      '24': 0 calc(var(--spacer) * 12),
-      '32': 0 calc(var(--spacer) * 16),
-      '40': 0 calc(var(--spacer) * 20),
-      '48': 0 calc(var(--spacer) * 24)
-    )
+    'values': $horizontal-spacing
   ),
   'padding vertical only': (
     'prefix': 'py',
     'property': 'padding',
-    'values': (
-      '0': 0,
-      '4': calc(var(--spacer) * 2) 0,
-      '8': calc(var(--spacer) * 4) 0,
-      '16': calc(var(--spacer) * 8) 0,
-      '24': calc(var(--spacer) * 12) 0,
-      '32': calc(var(--spacer) * 16) 0,
-      '40': calc(var(--spacer) * 20) 0,
-      '48': calc(var(--spacer) * 24) 0
-    )
+    'values': $vertical-spacing
   ),
   'padding left': (
     'prefix': 'pl',
     'property': 'padding-left',
-    'values': (
-      '0': 0,
-      '4': calc(var(--spacer) * 2),
-      '8': calc(var(--spacer) * 4),
-      '16': calc(var(--spacer) * 8),
-      '24': calc(var(--spacer) * 12),
-      '32': calc(var(--spacer) * 16),
-      '40': calc(var(--spacer) * 20),
-      '48': calc(var(--spacer) * 24)
-    )
+    'values': $single-direction-spacing
   ),
   'padding right': (
     'prefix': 'pr',
     'property': 'padding-right',
-    'values': (
-      '0': 0,
-      '4': calc(var(--spacer) * 2),
-      '8': calc(var(--spacer) * 4),
-      '16': calc(var(--spacer) * 8),
-      '24': calc(var(--spacer) * 12),
-      '32': calc(var(--spacer) * 16),
-      '40': calc(var(--spacer) * 20),
-      '48': calc(var(--spacer) * 24)
-    )
+    'values': $single-direction-spacing
   ),
   'padding top': (
     'prefix': 'pt',
     'property': 'padding-top',
-    'values': (
-      '0': 0,
-      '4': calc(var(--spacer) * 2),
-      '8': calc(var(--spacer) * 4),
-      '16': calc(var(--spacer) * 8),
-      '24': calc(var(--spacer) * 12),
-      '32': calc(var(--spacer) * 16),
-      '40': calc(var(--spacer) * 20),
-      '48': calc(var(--spacer) * 24)
-    )
+    'values': $single-direction-spacing
   ),
   'padding bottom': (
     'prefix': 'pb',
     'property': 'padding-bottom',
-    'values': (
-      '0': 0,
-      '4': calc(var(--spacer) * 2),
-      '8': calc(var(--spacer) * 4),
-      '16': calc(var(--spacer) * 8),
-      '24': calc(var(--spacer) * 12),
-      '32': calc(var(--spacer) * 16),
-      '40': calc(var(--spacer) * 20),
-      '48': calc(var(--spacer) * 24)
-    )
+    'values': $single-direction-spacing
   ),
   'margin': (
     'prefix': 'm',
     'property': 'margin',
-    'values': (
-      '0': 0,
-      '4': calc(var(--spacer) * 2),
-      '8': calc(var(--spacer) * 4),
-      '16': calc(var(--spacer) * 8),
-      '24': calc(var(--spacer) * 12),
-      '32': calc(var(--spacer) * 16),
-      '40': calc(var(--spacer) * 20),
-      '48': calc(var(--spacer) * 24)
-    )
+    'values': $single-direction-spacing
+  ),
+  'margin horizontal only': (
+    'prefix': 'mx',
+    'property': 'margin',
+    'values': $horizontal-spacing
+  ),
+  'margin vertical only': (
+    'prefix': 'my',
+    'property': 'margin',
+    'values': $vertical-spacing
   ),
   'margin left': (
     'prefix': 'ml',
     'property': 'margin-left',
-    'values': (
-      '0': 0,
-      '4': calc(var(--spacer) * 2),
-      '8': calc(var(--spacer) * 4),
-      '16': calc(var(--spacer) * 8),
-      '24': calc(var(--spacer) * 12),
-      '32': calc(var(--spacer) * 16),
-      '40': calc(var(--spacer) * 20),
-      '48': calc(var(--spacer) * 24)
-    )
+    'values': $single-direction-spacing
   ),
   'margin right': (
     'prefix': 'mr',
     'property': 'margin-right',
-    'values': (
-      '0': 0,
-      '4': calc(var(--spacer) * 2),
-      '8': calc(var(--spacer) * 4),
-      '16': calc(var(--spacer) * 8),
-      '24': calc(var(--spacer) * 12),
-      '32': calc(var(--spacer) * 16),
-      '40': calc(var(--spacer) * 20),
-      '48': calc(var(--spacer) * 24)
-    )
+    'values': $single-direction-spacing
   ),
   'margin top': (
     'prefix': 'mt',
     'property': 'margin-top',
-    'values': (
-      '0': 0,
-      '4': calc(var(--spacer) * 2),
-      '8': calc(var(--spacer) * 4),
-      '16': calc(var(--spacer) * 8),
-      '24': calc(var(--spacer) * 12),
-      '32': calc(var(--spacer) * 16),
-      '40': calc(var(--spacer) * 20),
-      '48': calc(var(--spacer) * 24)
-    )
+    'values': $single-direction-spacing
   ),
   'margin bottom': (
     'prefix': 'mb',
     'property': 'margin-bottom',
-    'values': (
-      '0': 0,
-      '4': calc(var(--spacer) * 2),
-      '8': calc(var(--spacer) * 4),
-      '16': calc(var(--spacer) * 8),
-      '24': calc(var(--spacer) * 12),
-      '32': calc(var(--spacer) * 16),
-      '40': calc(var(--spacer) * 20),
-      '48': calc(var(--spacer) * 24)
-    )
+    'values': $single-direction-spacing
   ),
   'margin auto': (
     'prefix': 'm',
@@ -258,20 +214,7 @@ $utilities: (
   'order': (
     'prefix': 'order',
     'property': 'order',
-    'values': (
-      '1': 1,
-      '2': 2,
-      '3': 3,
-      '4': 4,
-      '5': 5,
-      '6': 6,
-      '7': 7,
-      '8': 8,
-      '9': 9,
-      '10': 10,
-      '11': 11,
-      '12': 12
-    )
+    'values': $order
   ),
   'align content': (
     'prefix': 'align-content',
@@ -286,7 +229,6 @@ $utilities: (
   )
 );
 
-// generate utility classes
 @each $property, $map in $utilities {
   $prefix: map-get($map, 'prefix');
   $values: map-get($map, 'values');

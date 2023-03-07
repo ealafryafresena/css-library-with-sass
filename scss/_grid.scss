@@ -1,10 +1,16 @@
+@function calculateColumns($i, $grid-columns) {
+  @return calc($i * 100% / $grid-columns);
+}
+
 $grid-columns: 12;
+
 $container-max-widths: (
   'sm': 540px,
   'md': 720px,
   'lg': 960px,
   'xl': 1140px
 );
+
 $grid-gaps: (
   '20': 10px,
   '30': 15px,
@@ -26,6 +32,7 @@ $grid-gaps: (
     }
   }
 }
+
 .row {
   display: flex;
   flex-flow: row wrap;
@@ -36,19 +43,50 @@ $grid-gaps: (
   .gap-#{$key} > * {
     padding: $val;
   }
+
+  .gap-x-#{$key} > * {
+    padding-left: $val;
+    padding-right: $val;
+  }
+
+  .gap-y-#{$key} > * {
+    padding-bottom: $val;
+    padding-top: $val;
+  }
+
   .gap-#{$key} {
+    margin-left: -$val;
+    margin-right: -$val;
+  }
+
+  .gap-x-#{$key} {
     margin-left: -$val;
     margin-right: -$val;
   }
 }
 
-// cols classes
+// cols and cols-offset classes
+.w-100 {
+  width: 100%;
+  height: 0;
+  padding: 0;
+}
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
 @include xs {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-xs {
       box-sizing: border-box;
       flex-grow: 0;
-      width: calc($i * 100% / $grid-columns);
+      width: calculateColumns($i, $grid-columns);
+    }
+
+    .offset-#{$i}-xs {
+      margin-left: calculateColumns($i, $grid-columns);
     }
   }
 }
@@ -58,7 +96,11 @@ $grid-gaps: (
     .col-#{$i}-sm {
       box-sizing: border-box;
       flex-grow: 0;
-      width: calc($i * 100% / $grid-columns);
+      width: calculateColumns($i, $grid-columns);
+    }
+
+    .offset-#{$i}-sm {
+      margin-left: calculateColumns($i, $grid-columns);
     }
   }
 }
@@ -68,7 +110,11 @@ $grid-gaps: (
     .col-#{$i}-md {
       box-sizing: border-box;
       flex-grow: 0;
-      width: calc($i * 100% / $grid-columns);
+      width: calculateColumns($i, $grid-columns);
+    }
+
+    .offset-#{$i}-md {
+      margin-left: calculateColumns($i, $grid-columns);
     }
   }
 }
@@ -78,7 +124,11 @@ $grid-gaps: (
     .col-#{$i}-lg {
       box-sizing: border-box;
       flex-grow: 0;
-      width: calc($i * 100% / $grid-columns);
+      width: calculateColumns($i, $grid-columns);
+    }
+
+    .offset-#{$i}-lg {
+      margin-left: calculateColumns($i, $grid-columns);
     }
   }
 }
@@ -88,7 +138,11 @@ $grid-gaps: (
     .col-#{$i}-xl {
       box-sizing: border-box;
       flex-grow: 0;
-      width: calc($i * 100% / $grid-columns);
+      width: calculateColumns($i, $grid-columns);
+    }
+
+    .offset-#{$i}-xl {
+      margin-left: calculateColumns($i, $grid-columns);
     }
   }
 }
