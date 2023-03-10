@@ -907,28 +907,36 @@ body {
   order: 12;
 }
 
-.font-xs {
+.fs-xs {
   font-size: var(--base-font-size);
 }
 
-.font-sm {
+.fs-sm {
   font-size: var(--font-size-sm);
 }
 
-.font-md {
+.fs-md {
   font-size: var(--font-size-md);
 }
 
-.font-lg {
+.fs-lg {
   font-size: var(--font-size-lg);
 }
 
-.font-xl {
+.fs-xl {
   font-size: var(--font-size-xl);
 }
 
-.font-xxl {
+.fs-xxl {
   font-size: var(--font-size-xxl);
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+
+.fw-bold {
+  font-weight: bold;
 }
 
 .fst-italic {
@@ -937,6 +945,62 @@ body {
 
 .fst-normal {
   font-style: normal;
+}
+
+.ta-left {
+  text-align: left;
+}
+
+.ta-right {
+  text-align: right;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-justify {
+  text-align: justify;
+}
+
+.td-none {
+  text-decoration: none;
+}
+
+.td-underline {
+  text-decoration: underline;
+}
+
+.td-line-through {
+  text-decoration: line-through;
+}
+
+.tt-lowercase {
+  text-transform: lowercase;
+}
+
+.tt-uppercase {
+  text-transform: uppercase;
+}
+
+.tt-capitalize {
+  text-transform: capitalize;
+}
+
+.tws-wrap {
+  white-space: normal;
+}
+
+.tws-nowrap {
+  white-space: nowrap;
+}
+
+.tww-break-word {
+  word-wrap: break-word;
+}
+
+.tww-normal {
+  word-wrap: normal;
 }
 
 .container {

@@ -1,0 +1,48 @@
+$text-align-map: (
+  'prefix': 'ta',
+  'property': 'text-align',
+  'values': (
+    'left': left,
+    'right': right,
+    'center': center,
+    'justify': justify
+  )
+);
+
+$text-decoration-map: (
+  'prefix': 'td',
+  'property': 'text-decoration',
+  'values': (
+    'none': none,
+    'underline': underline,
+    'line-through': line-through
+  )
+);
+
+$text-transform-map: (
+  'prefix': 'tt',
+  'property': 'text-transform',
+  'values': (
+    'lowercase': lowercase,
+    'uppercase': uppercase,
+    'capitalize': capitalize
+  )
+);
+
+$white-space-map: (
+  'prefix': 'tws',
+  'property': 'white-space',
+  'values': (
+    'wrap': normal,
+    'nowrap': nowrap
+  )
+);
+
+$word-wrap-map: (
+  'prefix': 'tww',
+  'property': 'word-wrap',
+  'values': (
+    'break-word': break-word,
+    'normal': normal
+  )
+);

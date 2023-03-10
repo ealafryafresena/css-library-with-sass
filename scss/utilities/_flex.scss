@@ -62,54 +62,54 @@ $align-self: (
 
 $flex-direction-map: (
   'prefix': 'flex',
-  'class': 'flex-direction',
+  'property': 'flex-direction',
   'values': $flex-direction
 );
 
 $flex-wrap-map: (
   'prefix': 'flex',
-  'class': 'flex-wrap',
+  'property': 'flex-wrap',
   'values': $flex-wrap
 );
 
 $flex-flow-map: (
   'prefix': 'flex-flow',
-  'class': 'flex-flow',
+  'property': 'flex-flow',
   'values': map-merge(map-merge($flex-flow, $flex-direction), $flex-wrap)
 );
 
 $justify-content-map: (
   'prefix': 'justify-content',
-  'class': 'justify-content',
+  'property': 'justify-content',
   'values': map-merge($justify-content, $common-flex-rules)
 );
 
 $justify-items-map: (
   'prefix': 'justify-items',
-  'class': 'justify-items',
+  'property': 'justify-items',
   'values': map-merge($justify-items, $common-flex-rules)
 );
 
 $justify-self-map: (
   'prefix': 'justify-self',
-  'class': 'justify-self',
+  'property': 'justify-self',
   'values': map-merge($justify-self, $common-flex-rules)
 );
 
 $align-content-map: (
   'prefix': 'align-content',
-  'class': 'align-content',
+  'property': 'align-content',
   'values': map-merge($align-content, $common-flex-rules)
 );
 
 $align-items-map: (
   'prefix': 'align-items',
-  'class': 'align-items',
+  'property': 'align-items',
   'values': map-merge($align-items, $common-flex-rules)
 );
 
 $align-self-map: (
   'prefix': 'align-self',
-  'class': 'align-self',
+  'property': 'align-self',
   'values': map-merge($align-self, $common-flex-rules)
 );

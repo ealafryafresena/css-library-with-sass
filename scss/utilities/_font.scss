@@ -1,6 +1,6 @@
 $font-size-map: (
-  'prefix': 'font',
-  'class': 'font-size',
+  'prefix': 'fs',
+  'property': 'font-size',
   'values': (
     'xs': var(--base-font-size),
     'sm': var(--font-size-sm),
@@ -11,9 +11,18 @@ $font-size-map: (
   )
 );
 
+$font-weight-map: (
+  'prefix': 'fw',
+  'property': 'font-weight',
+  'values': (
+    'normal': normal,
+    'bold': bold
+  )
+);
+
 $font-style-map: (
   'prefix': 'fst',
-  'class': 'font-style',
+  'property': 'font-style',
   'values': (
     'italic': italic,
     'normal': normal
