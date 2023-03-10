@@ -1,0 +1,55 @@
+@import './spacing';
+@import './order';
+@import './font';
+@import './display';
+@import './flex';
+
+/* generate utility classes */
+$utilities: (
+  'padding': $padding-map,
+  'padding horizontal only': $padding-x-map,
+  'padding vertical only': $padding-y-map,
+  'padding left': $padding-left-map,
+  'padding right': $padding-right-map,
+  'padding top': $padding-top-map,
+  'padding bottom': $padding-bottom-map,
+  'margin': $margin-map,
+  'margin x only': $margin-x-map,
+  'margin y only': $margin-y-map,
+  'margin left': $margin-left-map,
+  'margin right': $margin-right-map,
+  'margin top': $margin-top-map,
+  'margin bottom': $margin-bottom-map,
+  'margin auto': $margin-auto-map,
+  'display': $display-map,
+  'flex direction': $flex-direction-map,
+  'flex wrap': $flex-wrap-map,
+  'flex flow': $flex-flow-map,
+  'justify content': $justify-content-map,
+  'justify items': $justify-items-map,
+  'justify self': $justify-self-map,
+  'align content': $align-content-map,
+  'align items': $align-items-map,
+  'align self': $align-self-map,
+  'order': $order-map,
+  'font size': $font-size-map,
+  'font style': $font-style-map
+);
+
+@each $property, $map in $utilities {
+  $prefix: map-get($map, 'prefix');
+  $values: map-get($map, 'values');
+  $rule: map-get($map, 'class');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .#{$prefix} {
+        #{$rule}: $v;
+      }
+    } @else {
+      .#{$prefix}-#{$k} {
+        #{$rule}: $v;
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+$common-flex-rules: (
+  'start': start,
+  'end': end,
+  'center': center,
+  'normal': normal,
+  'stretch': stretch
+);
+
+$flex-direction: (
+  'row': row,
+  'row-reverse': row-reverse,
+  'column': column,
+  'column-reverse': column-reverse
+);
+
+$flex-wrap: (
+  'nowrap': nowrap,
+  'wrap': wrap,
+  'wrap-reverse': wrap-reverse
+);
+
+$flex-flow: (
+  'row nowrap': row nowrap,
+  'column-wrap': column wrap,
+  'column-wrap-reverse': column-reverse wrap-reverse
+);
+
+$justify-content: (
+  'around': space-around,
+  'between': space-between,
+  'evenly': space-evenly
+);
+
+$justify-items: (
+  'left': left,
+  'right': right,
+  'baseline': baseline
+);
+
+$justify-self: (
+  'left': left,
+  'right': right,
+  'baseline': baseline,
+  'auto': auto
+);
+
+$align-content: (
+  'around': space-around,
+  'between': space-between,
+  'evenly': space-evenly,
+  'baseline': baseline
+);
+
+$align-items: (
+  'baseline': baseline
+);
+
+$align-self: (
+  'baseline': baseline,
+  'auto': auto
+);
+
+$flex-direction-map: (
+  'prefix': 'flex',
+  'class': 'flex-direction',
+  'values': $flex-direction
+);
+
+$flex-wrap-map: (
+  'prefix': 'flex',
+  'class': 'flex-wrap',
+  'values': $flex-wrap
+);
+
+$flex-flow-map: (
+  'prefix': 'flex-flow',
+  'class': 'flex-flow',
+  'values': map-merge(map-merge($flex-flow, $flex-direction), $flex-wrap)
+);
+
+$justify-content-map: (
+  'prefix': 'justify-content',
+  'class': 'justify-content',
+  'values': map-merge($justify-content, $common-flex-rules)
+);
+
+$justify-items-map: (
+  'prefix': 'justify-items',
+  'class': 'justify-items',
+  'values': map-merge($justify-items, $common-flex-rules)
+);
+
+$justify-self-map: (
+  'prefix': 'justify-self',
+  'class': 'justify-self',
+  'values': map-merge($justify-self, $common-flex-rules)
+);
+
+$align-content-map: (
+  'prefix': 'align-content',
+  'class': 'align-content',
+  'values': map-merge($align-content, $common-flex-rules)
+);
+
+$align-items-map: (
+  'prefix': 'align-items',
+  'class': 'align-items',
+  'values': map-merge($align-items, $common-flex-rules)
+);
+
+$align-self-map: (
+  'prefix': 'align-self',
+  'class': 'align-self',
+  'values': map-merge($align-self, $common-flex-rules)
+);

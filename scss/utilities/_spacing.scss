@@ -1,0 +1,131 @@
+@function calculateSpacing($i) {
+  @return calc(var(--spacer) * $i);
+}
+
+$single-value-spacing: (
+  '0': 0,
+  '4': calculateSpacing(2),
+  '8': calculateSpacing(4),
+  '12': calculateSpacing(6),
+  '16': calculateSpacing(8),
+  '24': calculateSpacing(12),
+  '32': calculateSpacing(16),
+  '40': calculateSpacing(20),
+  '48': calculateSpacing(24)
+);
+
+$horizontal-spacing: (
+  '0': 0,
+  '4': 0 calculateSpacing(2),
+  '8': 0 calculateSpacing(4),
+  '12': 0 calculateSpacing(6),
+  '16': 0 calculateSpacing(8),
+  '24': 0 calculateSpacing(12),
+  '32': 0 calculateSpacing(16),
+  '40': 0 calculateSpacing(20),
+  '48': 0 calculateSpacing(24)
+);
+
+$vertical-spacing: (
+  '0': 0,
+  '4': calculateSpacing(2) 0,
+  '8': calculateSpacing(4) 0,
+  '12': calculateSpacing(6) 0,
+  '16': calculateSpacing(8) 0,
+  '24': calculateSpacing(12) 0,
+  '32': calculateSpacing(16) 0,
+  '40': calculateSpacing(20) 0,
+  '48': calculateSpacing(24) 0
+);
+
+$padding-map: (
+  'prefix': 'p',
+  'class': 'padding',
+  'values': $single-value-spacing
+);
+
+$padding-x-map: (
+  'prefix': 'px',
+  'class': 'padding',
+  'values': $horizontal-spacing
+);
+
+$padding-y-map: (
+  'prefix': 'py',
+  'class': 'padding',
+  'values': $vertical-spacing
+);
+
+$padding-left-map: (
+  'prefix': 'pl',
+  'class': 'padding-left',
+  'values': $single-value-spacing
+);
+
+$padding-right-map: (
+  'prefix': 'pr',
+  'class': 'padding-right',
+  'values': $single-value-spacing
+);
+
+$padding-top-map: (
+  'prefix': 'pt',
+  'class': 'padding-top',
+  'values': $single-value-spacing
+);
+
+$padding-bottom-map: (
+  'prefix': 'pb',
+  'class': 'padding-bottom',
+  'values': $single-value-spacing
+);
+
+$margin-map: (
+  'prefix': 'm',
+  'class': 'margin',
+  'values': $single-value-spacing
+);
+
+$margin-x-map: (
+  'prefix': 'mx',
+  'class': 'margin',
+  'values': $horizontal-spacing
+);
+
+$margin-y-map: (
+  'prefix': 'my',
+  'class': 'margin',
+  'values': $vertical-spacing
+);
+
+$margin-left-map: (
+  'prefix': 'ml',
+  'class': 'margin-left',
+  'values': $single-value-spacing
+);
+
+$margin-right-map: (
+  'prefix': 'mr',
+  'class': 'margin-right',
+  'values': $single-value-spacing
+);
+
+$margin-top-map: (
+  'prefix': 'mt',
+  'class': 'margin-top',
+  'values': $single-value-spacing
+);
+
+$margin-bottom-map: (
+  'prefix': 'mb',
+  'class': 'margin-bottom',
+  'values': $single-value-spacing
+);
+
+$margin-auto-map: (
+  'prefix': 'm',
+  'class': 'margin',
+  'values': (
+    'auto': 0 auto
+  )
+);

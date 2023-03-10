@@ -1,0 +1,16 @@
+$display-map: (
+  'prefix': 'd',
+  'class': 'display',
+  'values': (
+    'none': none,
+    'inline': inline,
+    'inline-block': inline-block,
+    'block': block,
+    'grid': grid,
+    'table': table,
+    'table-cell': table-cell,
+    'table-row': table-row,
+    'flex': flex,
+    'inline-flex': inline-flex
+  )
+);
