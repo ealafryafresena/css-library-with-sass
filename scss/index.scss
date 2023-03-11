@@ -10,14 +10,6 @@
   min-height: 200px;
 }
 
-.card {
-  border: calc(var(--base-border-thickness) * 2) solid var(--gray-200);
-
-  .card-title {
-    font-weight: var(--font-weight-bold);
-  }
-}
-
 .colors-1,
 .colors-2,
 .colors-3,
@@ -70,7 +62,6 @@
 .col-item {
   background-color: var(--indigo-200);
   color: var(--indigo-800);
-  // font-weight: bold;
   width: 100%;
   border: 1px solid var(--indigo-300);
   border-radius: 5px;
