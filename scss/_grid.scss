@@ -38,6 +38,11 @@ $grid-gutters: (
   flex-flow: row wrap;
 }
 
+.row-nowrap {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
 @each $key, $val in $grid-gutters {
   .gutter-#{$key} {
     margin-left: -$val;
@@ -77,7 +82,7 @@ $grid-gutters: (
 }
 
 .col-auto {
-  flex-basis: 0;
+  flex-basis: auto;
   flex-grow: 1;
   width: auto;
 }
