@@ -1156,6 +1156,12 @@ body {
   max-width: 100%;
 }
 
+.col-auto {
+  flex-basis: 0;
+  flex-grow: 1;
+  width: auto;
+}
+
 @media (min-width: 0) {
   .col-1-xs {
     box-sizing: border-box;

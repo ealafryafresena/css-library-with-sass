@@ -76,6 +76,12 @@ $grid-gutters: (
   max-width: 100%;
 }
 
+.col-auto {
+  flex-basis: 0;
+  flex-grow: 1;
+  width: auto;
+}
+
 @include xs {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-xs {
