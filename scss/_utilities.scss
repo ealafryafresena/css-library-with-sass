@@ -45,15 +45,12 @@ $utilities: (
 
 @each $property, $map in $utilities {
   $prefix: map-get($map, 'prefix');
-  $values: map-get($map, 'values');
   $property: map-get($map, 'property');
+  $active: map-get($map, 'active');
+  $values: map-get($map, 'values');
 
-  @each $k, $v in $values {
-    @if ($k == 'default') {
-      .#{$prefix} {
-        #{$property}: $v;
-      }
-    } @else {
+  @if ($active == 'true') {
+    @each $k, $v in $values {
       .#{$prefix}-#{$k} {
         #{$property}: $v;
       }
