@@ -14,9 +14,6 @@
   --gray-600: #4b5563;
   --gray-800: #1f2937;
 
-  /* spacing */
-  --spacer: 2px;
-
   /* borders */
   --base-border-thickness: 1px;
 
@@ -29,4 +26,7 @@
   --font-size-xxl: calc(var(--base-font-size) * 2);
   --font-weight-normal: normal;
   --font-weight-bold: bold;
+
+   /* spacing */
+   --spacer: calc(var(--base-font-size) / 5);
 }
