@@ -10,6 +10,10 @@
   min-height: 200px;
 }
 
+h1 {
+  border-bottom: calc(var(--base-border-thickness) * 3) solid var(--indigo-800);
+}
+
 .colors-1,
 .colors-2,
 .colors-3,
