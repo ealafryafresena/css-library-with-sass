@@ -54,7 +54,7 @@ body {
   color: var(--gray-800);
 }
 
-/* generate utility classes */
+/* utility classes */
 .p-0 {
   padding: 0;
 }

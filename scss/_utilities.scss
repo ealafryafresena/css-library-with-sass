@@ -1,11 +1,11 @@
-@import './spacing';
-@import './order';
-@import './font';
-@import './display';
-@import './flex';
-@import './text';
+@import './utilityMaps/spacing';
+@import './utilityMaps/order';
+@import './utilityMaps/font';
+@import './utilityMaps/display';
+@import './utilityMaps/flex';
+@import './utilityMaps/text';
 
-/* generate utility classes */
+/* utility classes */
 $utilities: (
   'padding': $padding-map,
   'padding-x': $padding-x-map,
