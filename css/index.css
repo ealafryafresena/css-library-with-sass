@@ -1626,12 +1626,8 @@ body {
     margin-left: 100%;
   }
 }
-.h-150 {
-  height: 150px;
-}
-
-.h-200 {
-  height: 200px;
+.min-h-200 {
+  min-height: 200px;
 }
 
 .card {
