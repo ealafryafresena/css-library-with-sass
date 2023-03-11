@@ -11,7 +11,7 @@ $container-max-widths: (
   'xl': 1140px
 );
 
-$grid-gaps: (
+$grid-gutters: (
   '20': 10px,
   '30': 15px,
   '40': 20px,
@@ -38,30 +38,29 @@ $grid-gaps: (
   flex-flow: row wrap;
 }
 
-// grid gaps
-@each $key, $val in $grid-gaps {
-  .gap-#{$key} > * {
-    padding: $val;
+@each $key, $val in $grid-gutters {
+  .gutter-#{$key} {
+    margin-left: -$val;
+    margin-right: -$val;
+
+    > * {
+      padding: $val;
+    }
   }
 
-  .gap-x-#{$key} > * {
-    padding-left: $val;
-    padding-right: $val;
+  .gutter-x-#{$key} {
+    margin-left: -$val;
+    margin-right: -$val;
+
+    > * {
+      padding-left: $val;
+      padding-right: $val;
+    }
   }
 
-  .gap-y-#{$key} > * {
+  .gutter-y-#{$key} > * {
     padding-bottom: $val;
     padding-top: $val;
-  }
-
-  .gap-#{$key} {
-    margin-left: -$val;
-    margin-right: -$val;
-  }
-
-  .gap-x-#{$key} {
-    margin-left: -$val;
-    margin-right: -$val;
   }
 }
 
