@@ -5,10 +5,12 @@
 $grid-columns: 12;
 
 $container-max-widths: (
+  'default': 1140px,
   'sm': 540px,
   'md': 720px,
   'lg': 960px,
-  'xl': 1140px
+  'xl': 1140px,
+  'fluid': 100%
 );
 
 $grid-gutters: (
@@ -18,17 +20,20 @@ $grid-gutters: (
   '50': 25px
 );
 
-// base layout classes
 .container {
   width: 100%;
-  max-width: 1140px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
 
   @each $key, $val in $container-max-widths {
-    &.container-#{$key} {
+    @if ($key == 'default') {
       max-width: #{$val};
+      } @else {
+      &-#{$key} {
+        @extend .container;
+        max-width: #{$val};
+      }
     }
   }
 }
@@ -42,39 +47,6 @@ $grid-gutters: (
   display: flex;
   flex-flow: row nowrap;
 }
-
-@each $key, $val in $grid-gutters {
-  .gutter-#{$key} {
-    margin-left: -$val;
-    margin-right: -$val;
-
-    > * {
-      padding: $val;
-    }
-  }
-
-  .gutter-x-#{$key} {
-    margin-left: -$val;
-    margin-right: -$val;
-
-    > * {
-      padding-left: $val;
-      padding-right: $val;
-    }
-  }
-
-  .gutter-y-#{$key} > * {
-    padding-bottom: $val;
-    padding-top: $val;
-  }
-}
-
-// cols and cols-offset classes
-.w-100 {
-  width: 100%;
-  height: 0;
-  padding: 0;
-}
 .col {
   flex-basis: 0;
   flex-grow: 1;
@@ -85,6 +57,12 @@ $grid-gutters: (
   flex-basis: auto;
   flex-grow: 1;
   width: auto;
+}
+
+.w-100 {
+  width: 100%;
+  height: 0;
+  padding: 0;
 }
 
 @include xs {
@@ -154,5 +132,31 @@ $grid-gutters: (
     .offset-#{$i}-xl {
       margin-left: calculateColumns($i, $grid-columns);
     }
+  }
+}
+
+@each $key, $val in $grid-gutters {
+  .gutter-#{$key} {
+    margin-left: -$val;
+    margin-right: -$val;
+
+    > * {
+      padding: $val;
+    }
+  }
+
+  .gutter-x-#{$key} {
+    margin-left: -$val;
+    margin-right: -$val;
+
+    > * {
+      padding-left: $val;
+      padding-right: $val;
+    }
+  }
+
+  .gutter-y-#{$key} > * {
+    padding-bottom: $val;
+    padding-top: $val;
   }
 }

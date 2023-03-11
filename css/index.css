@@ -1031,24 +1031,27 @@ body {
   word-wrap: normal;
 }
 
-.container {
+.container, .container-fluid, .container-xl, .container-lg, .container-md, .container-sm {
   width: 100%;
-  max-width: 1140px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
+  max-width: 1140px;
 }
-.container.container-sm {
+.container-sm {
   max-width: 540px;
 }
-.container.container-md {
+.container-md {
   max-width: 720px;
 }
-.container.container-lg {
+.container-lg {
   max-width: 960px;
 }
-.container.container-xl {
+.container-xl {
   max-width: 1140px;
+}
+.container-fluid {
+  max-width: 100%;
 }
 
 .row {
@@ -1061,100 +1064,6 @@ body {
   flex-flow: row nowrap;
 }
 
-.gutter-20 {
-  margin-left: -10px;
-  margin-right: -10px;
-}
-.gutter-20 > * {
-  padding: 10px;
-}
-
-.gutter-x-20 {
-  margin-left: -10px;
-  margin-right: -10px;
-}
-.gutter-x-20 > * {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.gutter-y-20 > * {
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
-
-.gutter-30 {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.gutter-30 > * {
-  padding: 15px;
-}
-
-.gutter-x-30 {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.gutter-x-30 > * {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.gutter-y-30 > * {
-  padding-bottom: 15px;
-  padding-top: 15px;
-}
-
-.gutter-40 {
-  margin-left: -20px;
-  margin-right: -20px;
-}
-.gutter-40 > * {
-  padding: 20px;
-}
-
-.gutter-x-40 {
-  margin-left: -20px;
-  margin-right: -20px;
-}
-.gutter-x-40 > * {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.gutter-y-40 > * {
-  padding-bottom: 20px;
-  padding-top: 20px;
-}
-
-.gutter-50 {
-  margin-left: -25px;
-  margin-right: -25px;
-}
-.gutter-50 > * {
-  padding: 25px;
-}
-
-.gutter-x-50 {
-  margin-left: -25px;
-  margin-right: -25px;
-}
-.gutter-x-50 > * {
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-.gutter-y-50 > * {
-  padding-bottom: 25px;
-  padding-top: 25px;
-}
-
-.w-100 {
-  width: 100%;
-  height: 0;
-  padding: 0;
-}
-
 .col {
   flex-basis: 0;
   flex-grow: 1;
@@ -1165,6 +1074,12 @@ body {
   flex-basis: auto;
   flex-grow: 1;
   width: auto;
+}
+
+.w-100 {
+  width: 100%;
+  height: 0;
+  padding: 0;
 }
 
 @media (min-width: 0) {
@@ -1657,6 +1572,94 @@ body {
     margin-left: 100%;
   }
 }
+.gutter-20 {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.gutter-20 > * {
+  padding: 10px;
+}
+
+.gutter-x-20 {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.gutter-x-20 > * {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.gutter-y-20 > * {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.gutter-30 {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.gutter-30 > * {
+  padding: 15px;
+}
+
+.gutter-x-30 {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.gutter-x-30 > * {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gutter-y-30 > * {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.gutter-40 {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.gutter-40 > * {
+  padding: 20px;
+}
+
+.gutter-x-40 {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.gutter-x-40 > * {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.gutter-y-40 > * {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.gutter-50 {
+  margin-left: -25px;
+  margin-right: -25px;
+}
+.gutter-50 > * {
+  padding: 25px;
+}
+
+.gutter-x-50 {
+  margin-left: -25px;
+  margin-right: -25px;
+}
+.gutter-x-50 > * {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.gutter-y-50 > * {
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
 .min-h-200 {
   min-height: 200px;
 }
