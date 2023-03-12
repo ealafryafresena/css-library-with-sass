@@ -1645,6 +1645,14 @@ body {
   min-height: 200px;
 }
 
+.min-h-150 {
+  min-height: 150px;
+}
+
+.h-150 {
+  height: 150px;
+}
+
 h1 {
   border-bottom: calc(var(--base-border-thickness) * 3) solid var(--indigo-800);
 }
