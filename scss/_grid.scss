@@ -59,13 +59,13 @@ $grid-gutters: (
 
 @include xs {
   @for $i from 1 through $grid-columns {
-    .col-#{$i}-xs {
+    .col-xs-#{$i} {
       box-sizing: border-box;
       flex-grow: 0;
       width: calculateColumns($i, $grid-columns);
     }
 
-    .offset-#{$i}-xs {
+    .offset-xs-#{$i} {
       margin-left: calculateColumns($i, $grid-columns);
     }
   }
@@ -73,13 +73,13 @@ $grid-gutters: (
 
 @include sm {
   @for $i from 1 through $grid-columns {
-    .col-#{$i}-sm {
+    .col-sm-#{$i} {
       box-sizing: border-box;
       flex-grow: 0;
       width: calculateColumns($i, $grid-columns);
     }
 
-    .offset-#{$i}-sm {
+    .offset-sm-#{$i} {
       margin-left: calculateColumns($i, $grid-columns);
     }
   }
@@ -87,13 +87,13 @@ $grid-gutters: (
 
 @include md {
   @for $i from 1 through $grid-columns {
-    .col-#{$i}-md {
+    .col-md-#{$i} {
       box-sizing: border-box;
       flex-grow: 0;
       width: calculateColumns($i, $grid-columns);
     }
 
-    .offset-#{$i}-md {
+    .offset-md-#{$i} {
       margin-left: calculateColumns($i, $grid-columns);
     }
   }
@@ -101,13 +101,13 @@ $grid-gutters: (
 
 @include lg {
   @for $i from 1 through $grid-columns {
-    .col-#{$i}-lg {
+    .col-lg-#{$i} {
       box-sizing: border-box;
       flex-grow: 0;
       width: calculateColumns($i, $grid-columns);
     }
 
-    .offset-#{$i}-lg {
+    .offset-lg-#{$i} {
       margin-left: calculateColumns($i, $grid-columns);
     }
   }
@@ -115,13 +115,13 @@ $grid-gutters: (
 
 @include xl {
   @for $i from 1 through $grid-columns {
-    .col-#{$i}-xl {
+    .col-xl-#{$i} {
       box-sizing: border-box;
       flex-grow: 0;
       width: calculateColumns($i, $grid-columns);
     }
 
-    .offset-#{$i}-xl {
+    .offset-xl-#{$i} {
       margin-left: calculateColumns($i, $grid-columns);
     }
   }
