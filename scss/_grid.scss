@@ -22,7 +22,6 @@ $grid-gutters: (
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
   box-sizing: border-box;
 
   @each $key, $val in $container-max-widths {
@@ -158,4 +157,9 @@ $grid-gutters: (
   width: 100%;
   height: 0;
   padding: 0;
+}
+
+// ToDo: move to utilities
+.o-h {
+  overflow: hidden;
 }
