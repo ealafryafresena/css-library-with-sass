@@ -1,8 +1,8 @@
-@function calculateSpacing($i) {
-  @return calc(var(--spacer) * $i);
+@function calculateSpacing($val) {
+  @return calc(var(--spacer) * $val);
 }
 
-$single-value-spacing: (
+$spacers: (
   '0': 0,
   '4': calculateSpacing(2),
   '8': calculateSpacing(4),
@@ -14,126 +14,114 @@ $single-value-spacing: (
   '48': calculateSpacing(24)
 );
 
-$horizontal-spacing: (
-  '0': 0,
-  '4': 0 calculateSpacing(2),
-  '8': 0 calculateSpacing(4),
-  '12': 0 calculateSpacing(6),
-  '16': 0 calculateSpacing(8),
-  '24': 0 calculateSpacing(12),
-  '32': 0 calculateSpacing(16),
-  '40': 0 calculateSpacing(20),
-  '48': 0 calculateSpacing(24)
-);
-
-$vertical-spacing: (
-  '0': 0,
-  '4': calculateSpacing(2) 0,
-  '8': calculateSpacing(4) 0,
-  '12': calculateSpacing(6) 0,
-  '16': calculateSpacing(8) 0,
-  '24': calculateSpacing(12) 0,
-  '32': calculateSpacing(16) 0,
-  '40': calculateSpacing(20) 0,
-  '48': calculateSpacing(24) 0
-);
-
 $padding-map: (
   'prefix': 'p',
   'property': 'padding',
   'active': 'true',
-  'values': $single-value-spacing
+  'values': $spacers
 );
 
 $padding-x-map: (
   'prefix': 'px',
-  'property': 'padding',
+  'property': (
+    padding-left,
+    padding-right
+  ),
   'active': 'true',
-  'values': $horizontal-spacing
+  'values': $spacers
 );
 
 $padding-y-map: (
   'prefix': 'py',
-  'property': 'padding',
+  'property': (
+    padding-top,
+    padding-bottom
+  ),
   'active': 'true',
-  'values': $vertical-spacing
+  'values': $spacers
 );
 
 $padding-left-map: (
   'prefix': 'pl',
   'property': 'padding-left',
   'active': 'true',
-  'values': $single-value-spacing
+  'values': $spacers
 );
 
 $padding-right-map: (
   'prefix': 'pr',
   'property': 'padding-right',
   'active': 'true',
-  'values': $single-value-spacing
+  'values': $spacers
 );
 
 $padding-top-map: (
   'prefix': 'pt',
   'property': 'padding-top',
   'active': 'true',
-  'values': $single-value-spacing
+  'values': $spacers
 );
 
 $padding-bottom-map: (
   'prefix': 'pb',
   'property': 'padding-bottom',
   'active': 'true',
-  'values': $single-value-spacing
+  'values': $spacers
 );
 
 $margin-map: (
   'prefix': 'm',
   'property': 'margin',
   'active': 'true',
-  'values': $single-value-spacing
+  'values': $spacers
 );
 
 $margin-x-map: (
   'prefix': 'mx',
-  'property': 'margin',
+  'property': (
+    margin-left,
+    margin-right
+  ),
   'active': 'true',
-  'values': $horizontal-spacing
+  'values': $spacers
 );
 
 $margin-y-map: (
   'prefix': 'my',
-  'property': 'margin',
+  'property': (
+    margin-top,
+    margin-bottom
+  ),
   'active': 'true',
-  'values': $vertical-spacing
+  'values': $spacers
 );
 
 $margin-left-map: (
   'prefix': 'ml',
   'property': 'margin-left',
   'active': 'true',
-  'values': $single-value-spacing
+  'values': $spacers
 );
 
 $margin-right-map: (
   'prefix': 'mr',
   'property': 'margin-right',
   'active': 'true',
-  'values': $single-value-spacing
+  'values': $spacers
 );
 
 $margin-top-map: (
   'prefix': 'mt',
   'property': 'margin-top',
   'active': 'true',
-  'values': $single-value-spacing
+  'values': $spacers
 );
 
 $margin-bottom-map: (
   'prefix': 'mb',
   'property': 'margin-bottom',
   'active': 'true',
-  'values': $single-value-spacing
+  'values': $spacers
 );
 
 $margin-auto-map: (

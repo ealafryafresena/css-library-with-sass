@@ -1,0 +1,23 @@
+@import './utilities';
+
+@each $property, $map in $utilities {
+  $prefix: map-get($map, 'prefix');
+  $properties: map-get($map, 'property');
+
+  $active: map-get($map, 'active');
+  $values: map-get($map, 'values');
+
+  @if type-of($values) == 'string' or type-of(nth($values, 1)) != 'list' {
+    $values: zip($values, $values);
+  }
+
+  @if ($active == 'true') {
+    @each $key, $value in $values {
+      .#{$prefix}-#{$key} {
+        @each $property in $properties {
+          #{$property}: $value;
+        }
+      }
+    }
+  }
+}

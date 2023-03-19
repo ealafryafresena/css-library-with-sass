@@ -1,0 +1,34 @@
+$text-align-map: (
+  'prefix': 'ta',
+  'property': 'text-align',
+  'active': 'false',
+  'values': left right center justify
+);
+
+$text-decoration-map: (
+  'prefix': 'td',
+  'property': 'text-decoration',
+  'active': 'false',
+  'values': none underline line-through
+);
+
+$text-transform-map: (
+  'prefix': 'tt',
+  'property': 'text-transform',
+  'active': 'true',
+  'values': lowercase uppercase capitalize
+);
+
+$white-space-map: (
+  'prefix': 'tws',
+  'property': 'white-space',
+  'active': 'true',
+  'values': normal nowrap
+);
+
+$word-wrap-map: (
+  'prefix': 'tww',
+  'property': 'word-wrap',
+  'active': 'true',
+  'values': break-word normal
+);

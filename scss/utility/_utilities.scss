@@ -1,9 +1,9 @@
-@import './utilityMaps/spacing';
-@import './utilityMaps/order';
-@import './utilityMaps/font';
-@import './utilityMaps/display';
-@import './utilityMaps/flex';
-@import './utilityMaps/text';
+@import './maps/spacing';
+@import './maps/order';
+@import './maps/font';
+@import './maps/display';
+@import './maps/flex';
+@import './maps/text';
 
 /* utility classes */
 $utilities: (
@@ -42,18 +42,3 @@ $utilities: (
   'white-space': $white-space-map,
   'word-wrap': $word-wrap-map
 );
-
-@each $property, $map in $utilities {
-  $prefix: map-get($map, 'prefix');
-  $property: map-get($map, 'property');
-  $active: map-get($map, 'active');
-  $values: map-get($map, 'values');
-
-  @if ($active == 'true') {
-    @each $k, $v in $values {
-      .#{$prefix}-#{$k} {
-        #{$property}: $v;
-      }
-    }
-  }
-}

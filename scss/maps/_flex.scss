@@ -64,14 +64,14 @@ $flex-direction-map: (
   'prefix': 'flex',
   'property': 'flex-direction',
   'active': 'true',
-  'values': $flex-direction
+  'values': row row-reverse column column-reverse
 );
 
 $flex-wrap-map: (
   'prefix': 'flex',
   'property': 'flex-wrap',
   'active': 'true',
-  'values': $flex-wrap
+  'values': nowrap wrap wrap-reverse
 );
 
 $flex-flow-map: (
@@ -106,19 +106,20 @@ $align-content-map: (
   'prefix': 'align-content',
   'property': 'align-content',
   'active': 'true',
-  'values': map-merge($align-content, $common-flex-rules)
+  'values': space-around space-between space-evenly baseline start end center
+    normal stretch
 );
 
 $align-items-map: (
   'prefix': 'align-items',
   'property': 'align-items',
   'active': 'true',
-  'values': map-merge($align-items, $common-flex-rules)
+  'values': baseline start end center normal stretch
 );
 
 $align-self-map: (
   'prefix': 'align-self',
   'property': 'align-self',
   'active': 'true',
-  'values': map-merge($align-self, $common-flex-rules)
+  'values': baseline auto start end center normal stretch
 );
