@@ -1,19 +1,19 @@
 $text-align-map: (
-  'prefix': 'ta',
+  'prefix': 'text',
   'property': 'text-align',
   'active': 'false',
-  'values': left right center justify
+  'values': left right center
 );
 
 $text-decoration-map: (
-  'prefix': 'td',
+  'prefix': 'text-decoration',
   'property': 'text-decoration',
   'active': 'false',
   'values': none underline line-through
 );
 
 $text-transform-map: (
-  'prefix': 'tt',
+  'prefix': 'text',
   'property': 'text-transform',
   'active': 'true',
   'values': lowercase uppercase capitalize
@@ -27,7 +27,7 @@ $white-space-map: (
 );
 
 $word-wrap-map: (
-  'prefix': 'tww',
+  'prefix': 'word-wrap',
   'property': 'word-wrap',
   'active': 'true',
   'values': break-word normal

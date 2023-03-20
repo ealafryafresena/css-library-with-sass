@@ -12,16 +12,16 @@ $font-size-map: (
   )
 );
 
-$font-weight-map: (
-  'prefix': 'fw',
-  'property': 'font-weight',
-  'active': 'true',
-  'values': normal bold
-);
-
 $font-style-map: (
   'prefix': 'fst',
   'property': 'font-style',
   'active': 'true',
   'values': italic normal
+);
+
+$font-weight-map: (
+  'prefix': 'fw',
+  'property': 'font-weight',
+  'active': 'true',
+  'values': normal bold
 );

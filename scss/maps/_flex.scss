@@ -1,74 +1,12 @@
-$common-flex-rules: (
-  'start': start,
-  'end': end,
-  'center': center,
-  'normal': normal,
-  'stretch': stretch
-);
-
-$flex-direction: (
-  'row': row,
-  'row-reverse': row-reverse,
-  'column': column,
-  'column-reverse': column-reverse
-);
-
-$flex-wrap: (
-  'nowrap': nowrap,
-  'wrap': wrap,
-  'wrap-reverse': wrap-reverse
-);
-
-$flex-flow: (
-  'row nowrap': row nowrap,
-  'column-wrap': column wrap,
-  'column-wrap-reverse': column-reverse wrap-reverse
-);
-
-$justify-content: (
-  'around': space-around,
-  'between': space-between,
-  'evenly': space-evenly
-);
-
-$justify-items: (
-  'left': left,
-  'right': right,
-  'baseline': baseline
-);
-
-$justify-self: (
-  'left': left,
-  'right': right,
-  'baseline': baseline,
-  'auto': auto
-);
-
-$align-content: (
-  'around': space-around,
-  'between': space-between,
-  'evenly': space-evenly,
-  'baseline': baseline
-);
-
-$align-items: (
-  'baseline': baseline
-);
-
-$align-self: (
-  'baseline': baseline,
-  'auto': auto
-);
-
 $flex-direction-map: (
-  'prefix': 'flex',
+  'prefix': 'flex-direction',
   'property': 'flex-direction',
   'active': 'true',
   'values': row row-reverse column column-reverse
 );
 
 $flex-wrap-map: (
-  'prefix': 'flex',
+  'prefix': 'flex-wrap',
   'property': 'flex-wrap',
   'active': 'true',
   'values': nowrap wrap wrap-reverse
@@ -78,28 +16,40 @@ $flex-flow-map: (
   'prefix': 'flex-flow',
   'property': 'flex-flow',
   'active': 'true',
-  'values': map-merge(map-merge($flex-flow, $flex-direction), $flex-wrap)
+  'values': (
+    'row': row,
+    'row-reverse': row-reverse,
+    'column': column,
+    'column-reverse': column-reverse,
+    'nowrap': nowrap,
+    'wrap': wrap,
+    'wrap-reverse': wrap-reverse,
+    'row-nowrap': row nowrap,
+    'column-nowrap': column nowrap,
+    'column-wrap-reverse': column-reverse wrap-reverse
+  )
 );
 
 $justify-content-map: (
   'prefix': 'justify-content',
   'property': 'justify-content',
   'active': 'true',
-  'values': map-merge($justify-content, $common-flex-rules)
+  'values': start end center normal stretch space-around space-between
+    space-evenly
 );
 
 $justify-items-map: (
   'prefix': 'justify-items',
   'property': 'justify-items',
   'active': 'true',
-  'values': map-merge($justify-items, $common-flex-rules)
+  'values': start end center normal stretch left right baseline
 );
 
 $justify-self-map: (
   'prefix': 'justify-self',
   'property': 'justify-self',
   'active': 'true',
-  'values': map-merge($justify-self, $common-flex-rules)
+  'values': start end center normal stretch left right baseline auto
 );
 
 $align-content-map: (
