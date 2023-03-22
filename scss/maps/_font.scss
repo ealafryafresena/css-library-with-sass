@@ -1,27 +1,27 @@
 $font-size-map: (
-  'prefix': 'fs',
-  'property': 'font-size',
-  'active': 'true',
-  'values': (
-    'xs': var(--base-font-size),
-    'sm': var(--font-size-sm),
-    'md': var(--font-size-md),
-    'lg': var(--font-size-lg),
-    'xl': var(--font-size-xl),
-    'xxl': var(--font-size-xxl)
+  prefix: fs,
+  property: font-size,
+  active: true,
+  values: (
+    xs: var(--base-font-size),
+    sm: var(--font-size-sm),
+    md: var(--font-size-md),
+    lg: var(--font-size-lg),
+    xl: var(--font-size-xl),
+    xxl: var(--font-size-xxl)
   )
 );
 
 $font-style-map: (
-  'prefix': 'fst',
-  'property': 'font-style',
-  'active': 'true',
-  'values': italic normal
+  prefix: fst,
+  property: font-style,
+  active: true,
+  values: italic normal
 );
 
 $font-weight-map: (
-  'prefix': 'fw',
-  'property': 'font-weight',
-  'active': 'true',
-  'values': normal bold
+  prefix: fw,
+  property: font-weight,
+  active: true,
+  values: normal bold
 );

@@ -5,18 +5,18 @@
 $grid-columns: 12;
 
 $container-max-widths: (
-  'default': 1140px,
-  'sm': 540px,
-  'md': 720px,
-  'lg': 960px,
-  'xl': 1140px,
-  'fluid': 100%
+  default: 1140px,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  fluid: 100%
 );
 
 $grid-gutters: (
-  '20': 10px,
-  '40': 20px,
-  '60': 30px,
+  20: 10px,
+  40: 20px,
+  60: 30px
 );
 
 .container {
@@ -27,7 +27,7 @@ $grid-gutters: (
   @each $key, $val in $container-max-widths {
     @if ($key == 'default') {
       max-width: #{$val};
-      } @else {
+    } @else {
       &-#{$key} {
         @extend .container;
         max-width: #{$val};

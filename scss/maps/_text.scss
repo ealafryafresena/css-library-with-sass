@@ -1,34 +1,34 @@
 $text-align-map: (
-  'prefix': 'text',
-  'property': 'text-align',
-  'active': 'false',
-  'values': left right center
+  prefix: text,
+  property: text-align,
+  active: true,
+  values: left right center
 );
 
 $text-decoration-map: (
-  'prefix': 'text-decoration',
-  'property': 'text-decoration',
-  'active': 'false',
-  'values': none underline line-through
+  prefix: 'text-decoration',
+  property: 'text-decoration',
+  active: true,
+  values: none underline line-through
 );
 
 $text-transform-map: (
-  'prefix': 'text',
-  'property': 'text-transform',
-  'active': 'true',
-  'values': lowercase uppercase capitalize
+  prefix: 'text-transform',
+  property: 'text-transform',
+  active: true,
+  values: lowercase uppercase capitalize
 );
 
 $white-space-map: (
-  'prefix': 'tws',
-  'property': 'white-space',
-  'active': 'true',
-  'values': normal nowrap
+  prefix: 'tws',
+  property: 'white-space',
+  active: true,
+  values: normal nowrap
 );
 
 $word-wrap-map: (
-  'prefix': 'word-wrap',
-  'property': 'word-wrap',
-  'active': 'true',
-  'values': break-word normal
+  prefix: 'word-wrap',
+  property: 'word-wrap',
+  active: true,
+  values: break-word normal
 );

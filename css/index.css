@@ -389,6 +389,10 @@ body {
   margin: calc(var(--spacer) * 24);
 }
 
+.m-auto {
+  margin: 0 auto;
+}
+
 .mx-0 {
   margin-left: 0;
   margin-right: 0;
@@ -623,10 +627,6 @@ body {
   margin-bottom: calc(var(--spacer) * 24);
 }
 
-.m-auto {
-  margin: 0 auto;
-}
-
 .d-none {
   display: none;
 }
@@ -835,40 +835,40 @@ body {
   justify-self: auto;
 }
 
-.align-content-space-around {
-  align-content: space-around;
+.align-conten-space-around {
+  align-conten: space-around;
 }
 
-.align-content-space-between {
-  align-content: space-between;
+.align-conten-space-between {
+  align-conten: space-between;
 }
 
-.align-content-space-evenly {
-  align-content: space-evenly;
+.align-conten-space-evenly {
+  align-conten: space-evenly;
 }
 
-.align-content-baseline {
-  align-content: baseline;
+.align-conten-baseline {
+  align-conten: baseline;
 }
 
-.align-content-start {
-  align-content: start;
+.align-conten-start {
+  align-conten: start;
 }
 
-.align-content-end {
-  align-content: end;
+.align-conten-end {
+  align-conten: end;
 }
 
-.align-content-center {
-  align-content: center;
+.align-conten-center {
+  align-conten: center;
 }
 
-.align-content-normal {
-  align-content: normal;
+.align-conten-normal {
+  align-conten: normal;
 }
 
-.align-content-stretch {
-  align-content: stretch;
+.align-conten-stretch {
+  align-conten: stretch;
 }
 
 .align-items-baseline {
@@ -1011,15 +1011,39 @@ body {
   font-style: normal;
 }
 
-.text-lowercase {
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+.text-decoration-line-through {
+  text-decoration: line-through;
+}
+
+.text-transform-lowercase {
   text-transform: lowercase;
 }
 
-.text-uppercase {
+.text-transform-uppercase {
   text-transform: uppercase;
 }
 
-.text-capitalize {
+.text-transform-capitalize {
   text-transform: capitalize;
 }
 

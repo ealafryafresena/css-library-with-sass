@@ -11,7 +11,7 @@
     $values: zip($values, $values);
   }
 
-  @if ($active == 'true') {
+  @if ($active == true) {
     @each $key, $value in $values {
       .#{$prefix}-#{$key} {
         @each $property in $properties {

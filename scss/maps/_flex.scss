@@ -1,75 +1,75 @@
 $flex-direction-map: (
-  'prefix': 'flex-direction',
-  'property': 'flex-direction',
-  'active': 'true',
-  'values': row row-reverse column column-reverse
+  prefix: flex-direction,
+  property: flex-direction,
+  active: true,
+  values: row row-reverse column column-reverse
 );
 
 $flex-wrap-map: (
-  'prefix': 'flex-wrap',
-  'property': 'flex-wrap',
-  'active': 'true',
-  'values': nowrap wrap wrap-reverse
+  prefix: flex-wrap,
+  property: flex-wrap,
+  active: true,
+  values: nowrap wrap wrap-reverse
 );
 
 $flex-flow-map: (
-  'prefix': 'flex-flow',
-  'property': 'flex-flow',
-  'active': 'true',
-  'values': (
-    'row': row,
-    'row-reverse': row-reverse,
-    'column': column,
-    'column-reverse': column-reverse,
-    'nowrap': nowrap,
-    'wrap': wrap,
-    'wrap-reverse': wrap-reverse,
-    'row-nowrap': row nowrap,
-    'column-nowrap': column nowrap,
-    'column-wrap-reverse': column-reverse wrap-reverse
+  prefix: flex-flow,
+  property: flex-flow,
+  active: true,
+  values: (
+    row: row,
+    row-reverse: row-reverse,
+    column: column,
+    column-reverse: column-reverse,
+    nowrap: nowrap,
+    wrap: wrap,
+    wrap-reverse: wrap-reverse,
+    row-nowrap: row nowrap,
+    column-nowrap: column nowrap,
+    column-wrap-reverse: column-reverse wrap-reverse
   )
 );
 
 $justify-content-map: (
-  'prefix': 'justify-content',
-  'property': 'justify-content',
-  'active': 'true',
-  'values': start end center normal stretch space-around space-between
+  prefix: justify-content,
+  property: justify-content,
+  active: true,
+  values: start end center normal stretch space-around space-between
     space-evenly
 );
 
 $justify-items-map: (
-  'prefix': 'justify-items',
-  'property': 'justify-items',
-  'active': 'true',
-  'values': start end center normal stretch left right baseline
+  prefix: justify-items,
+  property: justify-items,
+  active: true,
+  values: start end center normal stretch left right baseline
 );
 
 $justify-self-map: (
-  'prefix': 'justify-self',
-  'property': 'justify-self',
-  'active': 'true',
-  'values': start end center normal stretch left right baseline auto
+  prefix: justify-self,
+  property: justify-self,
+  active: true,
+  values: start end center normal stretch left right baseline auto
 );
 
 $align-content-map: (
-  'prefix': 'align-content',
-  'property': 'align-content',
-  'active': 'true',
-  'values': space-around space-between space-evenly baseline start end center
+  prefix: align-conten,
+  property: align-conten,
+  active: true,
+  values: space-around space-between space-evenly baseline start end center
     normal stretch
 );
 
 $align-items-map: (
-  'prefix': 'align-items',
-  'property': 'align-items',
-  'active': 'true',
-  'values': baseline start end center normal stretch
+  prefix: align-items,
+  property: align-items,
+  active: true,
+  values: baseline start end center normal stretch
 );
 
 $align-self-map: (
-  'prefix': 'align-self',
-  'property': 'align-self',
-  'active': 'true',
-  'values': baseline auto start end center normal stretch
+  prefix: align-self,
+  property: align-self,
+  active: true,
+  values: baseline auto start end center normal stretch
 );
